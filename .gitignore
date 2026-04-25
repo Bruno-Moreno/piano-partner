@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Piano Partner artifacts (downloaded videos, MIDI, model caches)
+data/
+
