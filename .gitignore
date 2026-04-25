@@ -220,3 +220,5 @@ __marimo__/
 # Piano Partner artifacts (downloaded videos, MIDI, model caches)
 data/
 
+# MAC
+.DS_Store

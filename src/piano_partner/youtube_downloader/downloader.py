@@ -5,7 +5,9 @@ import yt_dlp
 
 def _format_selector(max_height: int | None) -> str:
     h = f"[height<={max_height}]" if max_height else ""
+    # Prefer H.264 (avc1) for broad player support (QuickTime decodes AV1/VP9 unreliably).
     return (
+        f"bestvideo{h}[ext=mp4][vcodec^=avc1]+bestaudio[ext=m4a]/"
         f"bestvideo{h}[ext=mp4]+bestaudio[ext=m4a]/"
         f"best{h}[ext=mp4]/best{h}"
     )
